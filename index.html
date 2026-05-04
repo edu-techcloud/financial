@@ -3,13 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MyDuit-AI</title>
+    <title>MyDuit Pro + GPS</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2454/2454282.png">
+    
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: #f8fafc; }
-        iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        /* Memastikan paparan penuh tanpa scroll bar luar */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background-color: #f8fafc; 
+        }
+        
+        /* Frame yang responsif dan lancar */
+        iframe { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            display: block;
+        }
+
+        /* Loading indicator ringkas sementara tunggu GS loading */
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: sans-serif;
+            color: #6366f1;
+            font-weight: bold;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbwTk8AdZO-ozeG9v_vqox1RniHVhyttcrzK2w34Fp0rPSOC2D7NBIjY5oOIQ7rpLZdKPg/exec"></iframe>
+
+    <div class="loading-text">Memuatkan MyDuit...</div>
+
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbwTk8AdZO-ozeG9v_vqox1RniHVhyttcrzK2w34Fp0rPSOC2D7NBIjY5oOIQ7rpLZdKPg/exec"
+        allow="geolocation; camera; microphone" 
+        allowfullscreen>
+    </iframe>
+
 </body>
 </html>
