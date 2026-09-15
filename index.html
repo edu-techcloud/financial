@@ -3,53 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MyDui-AI-GPS</title>
+    <title>MyDuit-AI-GPS</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2454/2454282.png">
-    
-    <style>
-        /* Memastikan paparan penuh tanpa scroll bar luar */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            width: 100%; 
-            overflow: hidden; 
-            background-color: #f8fafc; 
-        }
-        
-        /* Frame yang responsif dan lancar */
-        iframe { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            border: none; 
-            display: block;
-        }
 
-        /* Loading indicator ringkas sementara tunggu GS loading */
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .loading-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-family: sans-serif;
             color: #6366f1;
             font-weight: bold;
-            z-index: -1;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <div class="loading-text">Memuatkan MyDuit...</div>
+    <div class="loading-text">Memuatkan MyDuit-AI.... 🚀</div>
 
-    <iframe 
-        src="https://script.google.com/macros/s/AKfycbxDDGnbsl-8pyNA5xQJYc7kAXc_LGzzwYXeL5wYdTkmAGUVtTY1Yg-3W9fkSPDWB3jXHw/exec"
-        allow="geolocation; camera; microphone" 
-        allowfullscreen>
-    </iframe>
+    <script>
+        // Redirect terus (bukan iframe) supaya login Google jadi first-party,
+        // tiada lagi isu third-party cookie / perlu incognito.
+        window.location.replace("https://script.google.com/macros/s/AKfycbxDDGnbsl-8pyNA5xQJYc7kAXc_LGzzwYXeL5wYdTkmAGUVtTY1Yg-3W9fkSPDWB3jXHw/exec");
+    </script>
 
 </body>
 </html>
